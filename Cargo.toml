@@ -1,5 +1,5 @@
 [package]
-name = "nvm-win"
+name = "nvm"
 version = "0.0.0"
 authors = ["Chandresh Rajkumar Manonmani <cs1193@gmail.com>"]
 edition = "2018"
