@@ -1,8 +1,17 @@
 [package]
-name = "nvm"
+name = "nvm-win"
 version = "0.0.0"
 authors = ["Chandresh Rajkumar Manonmani <cs1193@gmail.com>"]
+description = "A node version manager written in Rust for under-privileged Windows users"
+license = "UNLICENSED"
+readme = "README.md"
+homepage = "https://github.com/cs1193/nvm-win"
+repository = "https://github.com/cs1193/nvm-win"
+keywords = ["cli", "nvm", "node-version-manager"]
+categories = ["command-line-utilities"]
 edition = "2018"
 
 [dependencies]
 structopt = { version = "0.3", default-features = false }
+reqwest = { version = "0.10", features = ["json"] }
+tokio = { version = "0.2", features = ["full"] }
