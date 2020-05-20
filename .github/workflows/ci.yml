@@ -1,8 +1,5 @@
-# ci: actions
-
-----
-
 name: CI
+
 on:
   push:
     branches:
