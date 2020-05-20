@@ -1,24 +1,22 @@
-
+# rust
 /target
 **/*.rs.bk
 
+# system
 *.orig
-*.pyc
 *.swp
 
+# cargo
 .cargo_home
-.vscode
 target
 
+# tmp
 .tmp
 tmp
 
+# env
 .env
 
-node_modules
-npm-debug.log
-lerna-debug.log
-yarn.lock
-
+# osx
 .DS_Store
 .DS_Store?
