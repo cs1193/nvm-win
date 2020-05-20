@@ -432,7 +432,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "nvm"
+name = "nvm-win"
 version = "0.0.0"
 dependencies = [
  "reqwest 0.10.4 (registry+https://github.com/rust-lang/crates.io-index)",
