@@ -1,6 +1,8 @@
 
 use structopt::StructOpt;
 
+mod installer;
+
 #[derive(Debug, StructOpt)]
 #[structopt(name = "nvm", about = "nvim")]
 struct Opt {
@@ -12,12 +14,19 @@ struct Opt {
 #[structopt(name = "command", about = "command")]
 enum Command {
   #[structopt(name = "local")]
-  Local(LocalOpts)
+  Local(LocalOpts),
+  #[structopt(name = "install")]
+  Install(InstallOpts)
 }
 
 #[derive(Debug, StructOpt)]
 struct LocalOpts {
   version: u8
+}
+
+#[derive(Debug, StructOpt)]
+struct InstallOpts {
+  version: Option<u8>
 }
 
 fn main() {
@@ -31,6 +40,11 @@ fn handle_subcommand(opt: Opt) {
     match subcommand {
       Command::Local(cfg) => {
         println!("handle Local: {:?}", cfg);
+      }
+
+      Command::Install(cfg) => {
+        installer::Installer::install();
+        println!("handle Install: {:?}", cfg);
       }
     }
   }
