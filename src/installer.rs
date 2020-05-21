@@ -4,7 +4,7 @@ pub struct Installer {
 }
 
 impl Installer {
-  pub fn install(cfg: Vec) -> () {
+  pub fn install() -> () {
     println!("Install");
   }
 }
