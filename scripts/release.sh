@@ -2,7 +2,7 @@
 
 version = $1
 
-if [ -z "$version" ]
+if [ ! -z "$version" ]
 then
     echo "Bumping to $version"
     cargo bump $version --git-tag
