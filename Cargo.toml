@@ -1,6 +1,6 @@
 [package]
 name = "nvm-win"
-version = "0.0.3"
+version = "0.0.4-alpha.0"
 authors = ["Chandresh Rajkumar Manonmani <cs1193@gmail.com>"]
 description = "A node version manager written in Rust for under-privileged Windows users"
 license = "MIT"
