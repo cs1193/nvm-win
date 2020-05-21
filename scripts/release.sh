@@ -1,9 +1,11 @@
 #!/bin/bash
 
-version = $1
 
-if [ ! -n "$version" ]
+if [ -z "$1" ]
 then
+    echo "Please provide version <major|minor|patch>"
+else
+    version = $1
     echo "Bumping to $version"
     cargo bump $version --git-tag
 
@@ -14,6 +16,4 @@ then
 
     echo "Publishing the package"
     cargo publish
-else 
-    echo "Please provide version <major|minor|patch>"
 fi
